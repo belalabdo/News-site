@@ -7,10 +7,10 @@ async function getNews(country = "eg", category = "business", num) {
     `https://newsapi.org/v2/top-headlines?pageSize=100&country=${country}&category=${category}&apiKey=b506b4134285445a9af676788ab280d1`
   );
   result = await api.json();
-  displayMain(result.articles);
+  //displayMain(result.articles);
   display(result.articles);
 }
-
+/*
 function displayMain(articles) {
   mainNews.innerHTML = `
   <div class="text-white d-flex justify-content-center align-items-center layer z-0">
@@ -27,7 +27,7 @@ function displayMain(articles) {
   />
   `;
 }
-
+*/
 function display(articles) {
   var validNews = [];
   validateNews(articles, validNews);
